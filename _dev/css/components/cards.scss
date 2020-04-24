@@ -1,0 +1,43 @@
+// Components - Cards
+
+.card {
+  background-color: var(--card-bg-color);
+  width: 100%;
+  border-radius: $border-radius;
+  margin: 12px 0;
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &.card-big {
+
+    &:before {
+      content: "";
+      display: block;
+      height: 4px;
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+    }
+
+    &.facebook:before {
+      background-color: $facebook;
+    }
+
+    &.twitter:before {
+      background-color: $twitter;
+    }
+
+    &.instagram:before {
+      background-color: $instagram;
+    }
+
+    &.youtube:before {
+      background-color: $youtube;
+    }
+
+  }
+
+}

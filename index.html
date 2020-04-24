@@ -1,87 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <!-- Metas -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Links -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+  <link rel="stylesheet" type="text/css" href="./theme.css" media="all">
+  <!-- Title -->
+  <title>Frontend Mentor | Social media dashboard with theme switcher</title>
 </head>
-<body>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+<body class="light-mode">
+  <h1>Social Media Dashboard</h1>
+  <p class="h3">Total Followers: 23,004</p>
 
-  Dark Mode
+  <!-- Mode toggle -->
+  <button id="mode-toggle" class="toggle"></button>
 
-  
+  <!-- Social networks -->
+  <ul class="list">
+    <li class="card card-big facebook">
+      <a href="">
+        <div class="card-type">
+          <img src="./images/icon-facebook.svg" alt="Facebook">
+          <p>@nathanf</p>
+        </div>
+        <p class="card-content">
+          <strong>1987</strong>
+          <span>followers</span>
+        </p>
+        <p class="card-progress progress-high">
+          12 Today
+        </p>
+      </a>
+    </li>
+  </ul>
 
-  @nathanf
-  1987
-  Followers
-  12 Today
+  <!-- Overview -->
+  <section>
+    <h2>Overview - Today</h2>
+    <ul class="list">
+      <li class="card card-small">
+        <a href="">
+          <h3 class="card-title">Page Views</h3>
+          <img src="./images/icon-facebook.svg" alt="Facebook">
+          <p class="card-content">
+            <strong>87</strong>
+          </p>
+          <p class="card-progress progress-high">
+            3%
+          </p>
+        </a>
+      </li>
+    </ul>
+  </section>
 
-  @nathanf
-  1044
-  Followers
-  99 Today
-
-  @realnathanf
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
-
-
-
-  Overview - Today
-
-  Page Views
-  87
-  3%
-
-  Likes
-  52
-  2%
-
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
-  
+  <!-- Attribution -->
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://web-be.fr">Eva Benoit</a>.
   </div>
+
+  <!-- Scripts -->
+  <script src="./theme.js"></script>
 </body>
 </html>

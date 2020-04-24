@@ -1,0 +1,47 @@
+// Layout - Main
+
+html {
+  background-image: url('./design/mobile-design-light.jpg');
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+body {
+  margin: 12px auto;
+  padding: 25px;
+}
+
+
+// Media queries
+
+@media all and (min-width: $sm-breakpoint) {
+
+  body {
+    max-width: $sm-body-max-width;
+  }
+
+}
+
+@media all and (min-width: $md-breakpoint) {
+
+  body {
+    max-width: $md-body-max-width;
+  }
+
+}
+
+@media all and (min-width: $lg-breakpoint) {
+
+  body {
+    max-width: $lg-body-max-width;
+  }
+
+}
+
+@media all and (min-width: $xl-breakpoint) {
+
+  body {
+    max-width: $xl-body-max-width;
+  }
+
+}
