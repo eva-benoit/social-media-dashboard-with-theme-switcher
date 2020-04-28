@@ -1,5 +1,10 @@
 import $ from "jquery";
 
 $(function() {
-  console.log('test');
+
+  $('.toggle-btn').click(function() {
+    $('html').toggleClass('light-mode dark-mode');
+    $(this).toggleClass('on');
+  });
+
 });

@@ -1,15 +1,24 @@
 // Fonts and headings
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   color: var(--text-main-color);
 }
 
+h1,
+h2 {
+  font-size: 24px;
+}
+
 h1 {
   margin: 0;
-  font-size: 24px;
   color: var(--text-strong-color);
+}
+
+h2 {
+  margin: 15px 0;
+  color: var(--title-main-color);
 }
 
 h3,
@@ -17,4 +26,13 @@ h3,
   margin: 6px 0;
   font-weight: 700;
   letter-spacing: .1px;
+}
+
+
+// Media queries
+
+@media all and (min-width: $xl-breakpoint) {
+  h1 {
+    font-size: 28px;
+  }
 }

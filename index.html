@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light-mode" lang="en">
 <head>
   <!-- Metas -->
   <meta charset="utf-8">
@@ -12,16 +12,19 @@
   <title>Frontend Mentor | Social media dashboard with theme switcher</title>
 </head>
 
-<body class="light-mode">
+<body>
   <h1>Social Media Dashboard</h1>
   <p class="h3">Total Followers: 23,004</p>
 
   <!-- Mode toggle -->
-  <button id="mode-toggle" class="toggle"></button>
+  <div class="toggle-container">
+    <p>Dark Mode</p>
+    <button class="toggle-btn"></button>
+  </div>
 
   <!-- Social networks -->
-  <ul class="list">
-    <li class="card card-big facebook">
+  <ul class="list" id="overview-main">
+    <li class="list-item card card-big facebook">
       <a href="">
         <div class="card-type">
           <img src="./images/icon-facebook.svg" alt="Facebook">
@@ -36,21 +39,166 @@
         </p>
       </a>
     </li>
+    <li class="list-item card card-big twitter">
+      <a href="">
+        <div class="card-type">
+          <img src="./images/icon-twitter.svg" alt="Twitter">
+          <p>@nathanf</p>
+        </div>
+        <p class="card-content">
+          <strong>1044</strong>
+          <span>followers</span>
+        </p>
+        <p class="card-progress progress-high">
+          99 Today
+        </p>
+      </a>
+    </li>
+    <li class="list-item card card-big instagram">
+      <a href="">
+        <div class="card-type">
+          <img src="./images/icon-instagram.svg" alt="Instagram">
+          <p>@realnathanf</p>
+        </div>
+        <p class="card-content">
+          <strong>11k</strong>
+          <span>followers</span>
+        </p>
+        <p class="card-progress progress-high">
+          1099 Today
+        </p>
+      </a>
+    </li>
+    <li class="list-item card card-big youtube">
+      <a href="">
+        <div class="card-type">
+          <img src="./images/icon-youtube.svg" alt="Youtube">
+          <p>Nathan F.</p>
+        </div>
+        <p class="card-content">
+          <strong>8239</strong>
+          <span>subscribers</span>
+        </p>
+        <p class="card-progress progress-low">
+          144 Today
+        </p>
+      </a>
+    </li>
   </ul>
 
   <!-- Overview -->
-  <section>
+  <section id="overview-today">
     <h2>Overview - Today</h2>
     <ul class="list">
-      <li class="card card-small">
+      <li class="list-item card card-small">
         <a href="">
-          <h3 class="card-title">Page Views</h3>
-          <img src="./images/icon-facebook.svg" alt="Facebook">
+          <div class="card-type">
+            <img src="./images/icon-facebook.svg" alt="Facebook">
+            <p>Page Views</p>
+          </div>
           <p class="card-content">
             <strong>87</strong>
           </p>
           <p class="card-progress progress-high">
             3%
+          </p>
+        </a>
+      </li>
+      <li class="list-item card card-small">
+        <a href="">
+          <div class="card-type">
+            <img src="./images/icon-facebook.svg" alt="Facebook">
+            <p>Likes</p>
+          </div>
+          <p class="card-content">
+            <strong>52</strong>
+          </p>
+          <p class="card-progress progress-low">
+            2%
+          </p>
+        </a>
+      </li>
+      <li class="list-item card card-small">
+        <a href="">
+          <div class="card-type">
+            <img src="./images/icon-instagram.svg" alt="Instagram">
+            <p>Likes</p>
+          </div>
+          <p class="card-content">
+            <strong>5462</strong>
+          </p>
+          <p class="card-progress progress-high">
+            2257%
+          </p>
+        </a>
+      </li>
+      <li class="list-item card card-small">
+        <a href="">
+          <div class="card-type">
+            <img src="./images/icon-instagram.svg" alt="Instagram">
+            <p>Profile Views</p>
+          </div>
+          <p class="card-content">
+            <strong>52k</strong>
+          </p>
+          <p class="card-progress progress-high">
+            1375%
+          </p>
+        </a>
+      </li>
+      <li class="list-item card card-small">
+        <a href="">
+          <div class="card-type">
+            <img src="./images/icon-twitter.svg" alt="Twitter">
+            <p>Retweets</p>
+          </div>
+          <p class="card-content">
+            <strong>117</strong>
+          </p>
+          <p class="card-progress progress-high">
+            303%
+          </p>
+        </a>
+      </li>
+      <li class="list-item card card-small">
+        <a href="">
+          <div class="card-type">
+            <img src="./images/icon-twitter.svg" alt="Twitter">
+            <p>Likes</p>
+          </div>
+          <p class="card-content">
+            <strong>507</strong>
+          </p>
+          <p class="card-progress progress-high">
+            553%
+          </p>
+        </a>
+      </li>
+      <li class="list-item card card-small">
+        <a href="">
+          <div class="card-type">
+            <img src="./images/icon-youtube.svg" alt="Youtube">
+            <p>Likes</p>
+          </div>
+          <p class="card-content">
+            <strong>107</strong>
+          </p>
+          <p class="card-progress progress-low">
+            19%
+          </p>
+        </a>
+      </li>
+      <li class="list-item card card-small">
+        <a href="">
+          <div class="card-type">
+            <img src="./images/icon-youtube.svg" alt="Youtube">
+            <p>Total Views</p>
+          </div>
+          <p class="card-content">
+            <strong>1407</strong>
+          </p>
+          <p class="card-progress progress-low">
+            12%
           </p>
         </a>
       </li>

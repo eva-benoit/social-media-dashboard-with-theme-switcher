@@ -1,17 +1,18 @@
 // Variables
 //
 // Use Sass variables by default.
-// Use CSS variable when its value might change through elements classes or ids.
+// Use CSS variable when its value might change considering elements classes or ids.
 
 // Color system
 
 $lime-green: hsl(163, 72%, 41%);
 $bright-red: hsl(356, 69%, 56%);
+$toggle-main-color: hsl(230, 22%, 74%);
 
 // Social networks colors
 $facebook: hsl(195, 100%, 50%);
 $twitter: hsl(203, 89%, 53%);
-$instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+$instagram: linear-gradient(90deg, hsl(37, 97%, 70%) 0%, hsl(329, 70%, 58%) 100%);
 $youtube: hsl(348, 97%, 39%);
 
 
@@ -24,6 +25,8 @@ $youtube: hsl(348, 97%, 39%);
   --main-bg-color: hsl(0, 0%, 100%);
   --top-bg-color: hsl(225, 100%, 98%);
   --card-bg-color: hsl(227, 47%, 96%);
+  --card-overlay-color: hsla(0, 0%, 0%, .06);
+  --title-main-color: hsl(228, 12%, 44%);
   --text-main-color: hsl(228, 12%, 44%);
   --text-strong-color: hsl(230, 17%, 14%);
 }
@@ -33,6 +36,8 @@ $youtube: hsl(348, 97%, 39%);
   --main-bg-color: hsl(230, 17%, 14%);
   --top-bg-color: hsl(232, 19%, 15%);
   --card-bg-color: hsl(228, 28%, 20%);
+  --card-overlay-color: hsla(0, 0%, 100%, .06);
+  --title-main-color: hsl(0, 0%, 100%);
   --text-main-color: hsl(228, 34%, 66%);
   --text-strong-color: hsl(0, 0%, 100%);
 }
@@ -52,14 +57,8 @@ $xl-breakpoint: 1200px;
 //
 // Define the maximum width of the body for different screen sizes.
 
-$sm-body-max-width: 540px;
+$xs-body-max-width: 325px;
+$sm-body-max-width: 500px;
 $md-body-max-width: 720px;
-$lg-body-max-width: 960px;
-$xl-body-max-width: 1200px;
-
-
-// Components
-//
-// Define common padding and border radius sizes and more.
-
-$border-radius: 5px;
+$lg-body-max-width: 900px;
+$xl-body-max-width: 1110px;

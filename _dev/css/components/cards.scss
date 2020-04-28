@@ -1,43 +1,178 @@
 // Components - Cards
 
 .card {
-  background-color: var(--card-bg-color);
+  position: relative;
+  margin: 12.4px 0;
+  overflow: hidden;
+  background: var(--card-bg-color);
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  a {
+    padding: 15px 25px 0;
+    overflow: auto;
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      background: var(--card-overlay-color);
+    }
+  }
+}
+
+
+// Card type
+
+.card-type {
+  display: flex;
+  align-items: center;
   width: 100%;
-  border-radius: $border-radius;
-  margin: 12px 0;
+  height: 20px;
+
+  img {
+    margin-right: 7px;
+  }
+
+  p {
+    font-weight: 700;
+  }
+}
+
+
+// Card content
+
+.card-content {
+  text-align: center;
+
+  strong {
+    display: block;
+    letter-spacing: -2px;
+    color: var(--text-strong-color);
+  }
+
+  span {
+    display: block;
+    padding-left: 2.5px;
+    margin-top: 4px;
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+}
+
+
+// Card progress
+
+.card-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px 0;
+  font-size: 12px;
+  font-weight: 700;
+
+  &:before {
+    margin-right: 4px;
+    line-height: 0;
+  }
+
+  &.progress-high {
+    color: $lime-green;
+
+    &:before {
+      content: url("./images/icon-up.svg");
+    }
+  }
+
+  &.progress-low {
+    color: $bright-red;
+
+    &:before {
+      content: url("./images/icon-down.svg");
+    }
+  }
+}
+
+
+// Big cards
+
+.card-big {
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+  }
+
+  &.facebook:before {
+    background: $facebook;
+  }
+
+  &.twitter:before {
+    background: $twitter;
+  }
+
+  &.instagram:before {
+    background: $instagram;
+  }
+
+  &.youtube:before {
+    background: $youtube;
+  }
 
   a {
     display: block;
-    text-decoration: none;
-    color: inherit;
   }
 
-  &.card-big {
+  .card-type {
+    justify-content: center;
+    margin: 18px 0;
 
-    &:before {
-      content: "";
-      display: block;
-      height: 4px;
-      border-top-left-radius: $border-radius;
-      border-top-right-radius: $border-radius;
+    p {
+      font-size: 12px;
     }
-
-    &.facebook:before {
-      background-color: $facebook;
-    }
-
-    &.twitter:before {
-      background-color: $twitter;
-    }
-
-    &.instagram:before {
-      background-color: $instagram;
-    }
-
-    &.youtube:before {
-      background-color: $youtube;
-    }
-
   }
 
+  .card-content {
+    strong {
+      font-size: 56px;
+    }
+  }
+}
+
+
+// Small cards
+
+.card-small {
+  margin: 13px 0 5px;
+
+  a {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card-type {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 10px 0 20px;
+  }
+
+  .card-content strong {
+    font-size: 34px;
+  }
+
+  .card-progress {
+    margin: 20px 7px 25px auto;
+  }
+}
+
+
+// Media queries
+
+@media all and (min-width: $xl-breakpoint) {
+  .card-small {
+    margin-bottom: 15px;
+  }
 }
