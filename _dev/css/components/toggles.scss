@@ -28,7 +28,7 @@
   &:before {
     content: "";
     position: relative;
-    left: calc(100% - 18px);
+    left: 24px;
     display: block;
     width: 18px;
     height: 18px;
@@ -55,7 +55,7 @@
     border-top: 0;
 
     p {
-      color: $toggle-main-color;
+      color: $light-toggle-bg-color;
     }
   }
 }

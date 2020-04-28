@@ -7,9 +7,34 @@
 
 $lime-green: hsl(163, 72%, 41%);
 $bright-red: hsl(356, 69%, 56%);
-$toggle-main-color: hsl(230, 22%, 74%);
+
+
+// Light theme colors
+
+$light-toggle-bg-color: hsl(230, 22%, 74%);
+$light-main-bg-color: hsl(0, 0%, 100%);
+$light-top-bg-color: hsl(225, 100%, 98%);
+$light-card-bg-color: hsl(227, 47%, 96%);
+$light-card-overlay-color: hsla(0, 0%, 0%, .06);
+$light-title-main-color: hsl(228, 12%, 44%);
+$light-text-main-color: hsl(228, 12%, 44%);
+$light-text-strong-color: hsl(230, 17%, 14%);
+
+
+// Dark theme colors
+
+$dark-toggle-bg-color: linear-gradient(90deg, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 100%);
+$dark-main-bg-color: hsl(230, 17%, 14%);
+$dark-top-bg-color: hsl(232, 19%, 15%);
+$dark-card-bg-color: hsl(228, 28%, 20%);
+$dark-card-overlay-color: hsla(0, 0%, 100%, .06);
+$dark-title-main-color: hsl(0, 0%, 100%);
+$dark-text-main-color: hsl(228, 34%, 66%);
+$dark-text-strong-color: hsl(0, 0%, 100%);
+
 
 // Social networks colors
+
 $facebook: hsl(195, 100%, 50%);
 $twitter: hsl(203, 89%, 53%);
 $instagram: linear-gradient(90deg, hsl(37, 97%, 70%) 0%, hsl(329, 70%, 58%) 100%);
@@ -21,25 +46,25 @@ $youtube: hsl(348, 97%, 39%);
 // Control the colors applied in dark/light mode.
 
 .light-mode {
-  --toggle-bg-color: hsl(230, 22%, 74%);
-  --main-bg-color: hsl(0, 0%, 100%);
-  --top-bg-color: hsl(225, 100%, 98%);
-  --card-bg-color: hsl(227, 47%, 96%);
-  --card-overlay-color: hsla(0, 0%, 0%, .06);
-  --title-main-color: hsl(228, 12%, 44%);
-  --text-main-color: hsl(228, 12%, 44%);
-  --text-strong-color: hsl(230, 17%, 14%);
+  --toggle-bg-color: #{$light-toggle-bg-color};
+  --main-bg-color: #{$light-main-bg-color};
+  --top-bg-color: #{$light-top-bg-color};
+  --card-bg-color: #{$light-card-bg-color};
+  --card-overlay-color: #{$light-card-overlay-color};
+  --title-main-color: #{$light-title-main-color};
+  --text-main-color: #{$light-text-main-color};
+  --text-strong-color: #{$light-text-strong-color};
 }
 
 .dark-mode {
-  --toggle-bg-color: linear-gradient(90deg, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 100%);
-  --main-bg-color: hsl(230, 17%, 14%);
-  --top-bg-color: hsl(232, 19%, 15%);
-  --card-bg-color: hsl(228, 28%, 20%);
-  --card-overlay-color: hsla(0, 0%, 100%, .06);
-  --title-main-color: hsl(0, 0%, 100%);
-  --text-main-color: hsl(228, 34%, 66%);
-  --text-strong-color: hsl(0, 0%, 100%);
+  --toggle-bg-color: #{$dark-toggle-bg-color};
+  --main-bg-color: #{$dark-main-bg-color};
+  --top-bg-color: #{$dark-top-bg-color};
+  --card-bg-color: #{$dark-card-bg-color};
+  --card-overlay-color: #{$dark-card-overlay-color};
+  --title-main-color: #{$dark-title-main-color};
+  --text-main-color: #{$dark-text-main-color};
+  --text-strong-color: #{$dark-text-strong-color};
 }
 
 
@@ -52,6 +77,7 @@ $sm-breakpoint: 576px;
 $md-breakpoint: 768px;
 $lg-breakpoint: 992px;
 $xl-breakpoint: 1200px;
+
 
 // Body max widths
 //

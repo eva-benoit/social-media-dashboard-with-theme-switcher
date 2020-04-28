@@ -1,0 +1,105 @@
+// IE 11 support
+//
+// IE 11 does not support CSS variables
+// https://caniuse.com/#feat=css-variables
+
+.ie {
+  &.light-mode {
+    // --toggle-bg-color
+    .toggle-btn {
+      background: $light-toggle-bg-color;
+    }
+
+    // --main-bg-color
+    &,
+    .toggle-btn:before {
+      background: $light-main-bg-color;
+    }
+
+    // --top-bg-color
+    &:before {
+      background: $light-top-bg-color;
+    }
+
+    // --card-bg-color
+    .card {
+      background: $light-card-bg-color;
+    }
+
+    // --card-overlay-color
+    .card a:hover {
+      background: $light-card-overlay-color;
+    }
+
+    // --title-main-color
+    h2 {
+      color: $light-title-main-color;
+    }
+
+    // --text-main-color
+    body,
+    a {
+      color: $light-text-main-color;
+    }
+
+    .toggle-container {
+      border-color: $light-text-main-color;
+    }
+
+    // --text-strong-color
+    h1,
+    .card-content strong {
+      color: $light-text-strong-color;
+    }
+  }
+
+
+  &.dark-mode {
+    // --toggle-bg-color
+    .toggle-btn {
+      background: $dark-toggle-bg-color;
+    }
+
+    // --main-bg-color
+    &,
+    .toggle-btn:before {
+      background: $dark-main-bg-color;
+    }
+
+    // --top-bg-color
+    &:before {
+      background: $dark-top-bg-color;
+    }
+
+    // --card-bg-color
+    .card {
+      background: $dark-card-bg-color;
+    }
+
+    // --card-overlay-color
+    .card a:hover {
+      background: $dark-card-overlay-color;
+    }
+
+    // --title-main-color
+    h2 {
+      color: $dark-title-main-color;
+    }
+
+    // --text-main-color
+    body,
+    a {
+      color: $light-text-main-color;
+    }
+
+    .toggle-container {
+      border-color: $dark-text-main-color;
+    }
+
+    // --text-strong-color
+    h1,
+    .card-content strong {
+      color: $dark-text-strong-color;
+    }
+  }
+}
