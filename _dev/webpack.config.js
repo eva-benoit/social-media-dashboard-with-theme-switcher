@@ -1,15 +1,10 @@
 const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-var DelayPlugin = require("webpack-delay-plugin");
 
 module.exports = {
-  entry: {
-    app: [
-      './js/theme.js',
-      './css/theme.scss'
-    ]
-  },
+  target: 'web',
+  entry: './app.js',
   output: {
     path: path.resolve(__dirname, '../'),
     filename: 'theme.js'
@@ -41,11 +36,6 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'theme.css'
-    }),
-    new DelayPlugin({
-      delay: 1000,
-      lifecycleEvents: ['run', 'watch-run'],
-      verbose: false
     })
   ]
 };
